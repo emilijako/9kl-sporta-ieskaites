@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sporta ieskaites anketa</title>
+    <style>
+      body {
+        color: white;
+        font-style: normal;
+        font-family: sans-serif;
+        font-size: 16px;
+        background: rgb(1, 1, 43);
+        background-image: url("img/blur.png");
+        background-repeat: no-repeat;
+      }
+      .heading{
+        position: static;
+        text-align: center;
+        width: 100%;
+        min-height: 30px;
+        border-radius: 20px 20px 0px 0px;
+        margin: 0px;
+        padding-top: 10px;
+        background-color: rgb(1, 1, 43);
+      }
+      h1 {
+        font-size: 30px;
+        text-align: center;
+        margin: 20px;
+        align-self: center;
+      }
+      h2 {
+        font-size: 20px;
+        justify-self: center;
+      }
+      label {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+      }
+      .field-input {
+        display: block;
+        align-self: center;
+        text-align: start;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+      }
+      .field-button {
+        display: block;
+        margin-top: 13px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100px;
+        color: white;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0);
+        outline-color: white;
+        outline-width: 2px;
+        outline-style: solid;
+      }
+      select {
+        display: block;
+        align-self: center;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+      }
+      textarea {
+        display: block;
+        align-self: center;
+        text-align: start;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+      }
+      #vingrinajums {
+        height: 200px;
+      }
+      .parent {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+      }
+
+      .div1 { 
+        grid-area: 2 / 2 / 2 / 12;
+        background: rgba(255, 255, 255, 0.05);
+      }
+      .div2 { 
+        grid-area: 3 / 2 / 3 / 5;
+        background: rgba(255, 255, 255, 0.05);
+        min-width: 300px;
+        height: 200px; }
+      .div3 { 
+        grid-area: 4 / 2 / 4 / 5;
+        background: rgba(255, 255, 255, 0.05);
+        min-width: 300px;
+        height: 200px; }
+      .div4 { 
+        grid-area: 3 / 5 / 5 / 12;
+        background: rgba(255, 255, 255, 0.05);
+        min-width: 300px;
+        }
+      .div5 { 
+        grid-area: 5 / 2 / 5 / 12;
+        background: rgba(255, 255, 255, 0.05);
+        height: 50px;  
+        }
+      .div6 { 
+        grid-area: 3 / 5 / 5 / 6; 
+        margin-top: 60px;
+        width: 120px; }
+      .div7 { 
+        grid-area: 3 / 6 / 5 / 12;
+        margin-top: 60px; }
+      .div9 { grid-area: 2 / 10 / 2 / 10; }
+
+      div{
+        border-radius: 20px 20px 20px 20px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="div1 nosaukums">
+        <h1>Sporta ieskaites anketa</h1>
+      </div>
+
+      <div class="div9 fons">
+        <img src="img/sport-minion_s.png">
+      </div>
+
+      <div class="div2 adresats">
+        <h2 class="heading">Adresāts</h2>
+        <label for="fname">Skolotāja vārds</label><br>
+        <input type="text" id="fname" name="fname" class="field-input"><br>
+      </div>
+
+      <div class="div3 grupa">
+        <h2 class="heading">Klašu grupa</h2>
+        <label for="grupa" class="field-label">Izvēlies savu klašu grupu</label><br>
+        <select id="grupa" name="grupa" >
+          <option value="1.-3.">1. - 3. klase</option>
+          <option value="4.-6.">4. - 6. klase</option>
+          <option value="7.-9.">7. - 9. klase</option>
+          <option value="10.-12.">10. - 12. klase</option>
+        </select>
+      </div>
+
+      <div class="div4 ieskaite">
+        <h2 class="heading">Ieskaites veids</h2>
+      </div>
+
+      <div class="div6 ieskaite1">
+        <label for="veids">Sporta veids</label><br>
+        <label for="vingrinajums" id="vingrinajums">Vingrinājums</label><br>
+        <label for="laiks">Gatavošanās laiks</label>
+      </div>
+      
+      <div class="div7 ieskaite2">
+        <select id="veids" name="veids" >
+            <option value="basketbols">Basketbols</option>
+            <option value="volejbols">Volejbols</option>
+            <option value="badmintons">Badmintons</option>
+            <option value="florbols">Florbols</option>
+            <option value="paklajinu">Vingrinājumi uz paklājiņiem</option>
+            <option value="futbols">Futbols</option>
+            <option value="tautasbumba">Tautas bumba</option>
+        </select><br>
+        <textarea rows="6" cols="60" id="vingrinajums" name="vingrinajums" class="field-text" placeholder="Ievadi detalizētu vingrinājuma aprakstu"></textarea><br>
+        <input type="text" id="laiks" name="laiks" class="field-input">
+      </div>
+      
+      <div class="div5 iesniegt">
+        <form id="form1" method="post" action="javascript:alert('Nosūtīts!')">
+          <input type="submit" value="Iesniegt" class="field-button">
+        </form>
+      </div>
+
+    </div>
+  </body>
+</html>
